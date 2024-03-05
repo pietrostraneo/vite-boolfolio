@@ -1,0 +1,55 @@
+<script>
+import Projects from './Projects.vue';
+import { store } from '../store';
+import axios from 'axios';
+export default {
+    name: 'AppMain',
+    components: {
+        Projects
+    },
+    data() {
+        return {
+            store,
+            projects: []
+        }
+    },
+    created() {
+        this.getProjects()
+    },
+    methods: {
+        
+        getProjects() {
+            axios.get(`${this.store.baseurl}api/projects`).then((response) => {
+                this.projects = response.data.results
+                console.log(this.projects)
+            })
+        }
+
+    },
+}
+</script>
+
+<template>
+    <main>
+
+        <div class="container">
+
+            <div class="row my-5 justify-content-center">
+                <div class="col-12 mb-3 text-center">
+                    <h3>Projects</h3>
+                </div>
+                <div class="col-6">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, blanditiis magni. Commodi neque repellendus consectetur harum ipsum, ducimus exercitationem maiores eligendi. Voluptatibus rerum harum facere. Blanditiis impedit repellendus accusamus tenetur!</p>
+                </div>
+            </div>
+
+            <Projects />
+
+        </div>
+        
+    </main>
+</template>
+
+<style lang="scss">
+    @use '../styles/general.scss';
+</style>
