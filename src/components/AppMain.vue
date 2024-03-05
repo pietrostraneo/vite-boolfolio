@@ -1,11 +1,11 @@
 <script>
-import Projects from './Projects.vue';
+import ProjectCard from './ProjectCard.vue';
 import { store } from '../store';
 import axios from 'axios';
 export default {
     name: 'AppMain',
     components: {
-        Projects
+        ProjectCard
     },
     data() {
         return {
@@ -43,7 +43,9 @@ export default {
                 </div>
             </div>
 
-            <Projects />
+            <div class="row">
+                <ProjectCard v-for="project, index in projects" :key="index" :project="project"/>
+            </div>
 
         </div>
         
