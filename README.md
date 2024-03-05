@@ -32,7 +32,7 @@ Creiamo un nuovo componente ProjectCard, che corrisponde ad una card per visuali
 
 Esercizio Consegnato
 
-### Bonus:
+### Bonus
 
 Gestire la paginazione dei risultati
 Buon lavoro e buon divertimento!
@@ -44,11 +44,11 @@ Ciao a tutti,
 
 Continuate a lavorare sulla stessa repo di venerdì. Implementate Vue Router nel vostro progetto e create le rotte con le relative componenti da mostrare.
 
-### Esercizio Base: 
+### Esercizio Base
 
 Realizzare una homepage e la pagina con l'elenco dei progetti. Implementando vue router verificare che cliccando sulle voci di menù apposite, si atterri nella pagina corretta.
 
-### BONUS:
+### BONUS
 
 Gestire la pagina 404 per quelle rotte che non hanno una componente specifica associata
 Buon lavoro!
