@@ -30,26 +30,24 @@ export default {
 </script>
 
 <template>
-    <main>
 
-        <div class="container">
+    <div class="container">
 
-            <div class="row my-5 justify-content-center">
-                <div class="col-12 mb-3 text-center">
-                    <h3>Projects</h3>
-                </div>
-                <div class="col-6">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, blanditiis magni. Commodi neque repellendus consectetur harum ipsum, ducimus exercitationem maiores eligendi. Voluptatibus rerum harum facere. Blanditiis impedit repellendus accusamus tenetur!</p>
-                </div>
+        <div class="row my-5 justify-content-center">
+            <div class="col-12 mb-3 text-center">
+                <h3>Projects</h3>
             </div>
-
-            <div class="row">
-                <ProjectCard v-for="project, index in projects" :key="index" :project="project"/>
+            <div class="col-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, blanditiis magni. Commodi neque repellendus consectetur harum ipsum, ducimus exercitationem maiores eligendi. Voluptatibus rerum harum facere. Blanditiis impedit repellendus accusamus tenetur!</p>
             </div>
-
         </div>
-        
-    </main>
+
+        <div class="row">
+            <ProjectCard v-for="project, index in projects" :key="index" :project="project"/>
+        </div>
+
+    </div>
+    
 </template>
 
 <style lang="scss">

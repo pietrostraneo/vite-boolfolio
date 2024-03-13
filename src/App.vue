@@ -9,7 +9,9 @@ export default {
 
 <template>
     <AppHeader />
-    <router-view></router-view>
+    <main>
+        <router-view></router-view>
+    </main>
 </template>
 
 <style lang="scss">

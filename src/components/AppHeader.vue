@@ -1,9 +1,10 @@
 <script>
+import { store } from '../store.js'
 export default {
     name: 'AppHeader',
     data() {
         return {
-            
+            store
         }
     },
 }
@@ -18,11 +19,11 @@ export default {
                     <nav
                         class="nav justify-content-center  "
                     >
-                        <a class="nav-link active" href="#" aria-current="page"
-                            >Project</a
-                        >
-                        <a class="nav-link" href="#">Info</a>
-                        <a class="nav-link" href="#">Login</a>
+                        <ul class="d-flex text-white list-unstyled ">
+                            <li v-for="item, index in store.menuItems" :key="index" class="mx-3">
+                                <router-link :to="{ name: item.name }">{{item.label}}</router-link>
+                            </li>
+                        </ul>
                     </nav>
                     
                 </div>
